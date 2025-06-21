@@ -64,7 +64,7 @@ const App = () => {
             fetch("http://localhost:3333/web-data", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "aplication/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ products: cartItems, queryID: queryID }),
             });
