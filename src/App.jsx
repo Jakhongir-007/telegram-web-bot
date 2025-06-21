@@ -66,11 +66,10 @@ const App = () => {
                 headers: {
                     "Content-Type": "aplication/json",
                 },
+                body: JSON.stringify({ products: cartItems, queryID: queryID }),
             });
         } else {
-            telegram.sendData(
-                JSON.stringify({ products: cartItems, queryID: queryID })
-            );
+            telegram.sendData(JSON.stringify(cartItems));
         }
     }, [cartItems]);
 
